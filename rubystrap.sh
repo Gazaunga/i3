@@ -1,5 +1,5 @@
 #!/bin/bash
-source ~/devBox/bin/.scripts/utils.sh
+source ~/i3/.local/bin/.scripts/utils.sh
 
 cd ~
 e_header "Let's build rbenv!"
@@ -26,3 +26,9 @@ e_underline "Read To Program With Ruby!"
 
 cd ~/devBox
 sh mv.sh
+
+#rb1 = system('echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rben.sh"')
+#rb2 = system('echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh'')
+
+#sudo bash -c #{rb1}
+#sudo bash -c #{rb2}
