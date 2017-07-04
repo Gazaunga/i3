@@ -10,7 +10,7 @@ PATH=$PATH:$HOME/.local
 #export EDITOR='emacs'
 #export GIT_EDITOR='/usr/bin/emacs'
 #export BROWSER=qutebrowser
-#export TERMINAL=urxvt
-#export FILEBROWSER=nautilus
+export TERMINAL=urxvt
+export FILEBROWSER=nautilus
 
 
