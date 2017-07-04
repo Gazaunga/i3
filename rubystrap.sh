@@ -30,7 +30,7 @@ sh mv.sh
 #rb1 = %x[sudo bash -c echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rben.sh"]
 #rb2 = %x[sudo bash -c echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh']
 
-#sudo bash -c #{rb1}
-#sudo bash -c #{rb2}
+# #{rb1}
+# #{rb2}
 
 #check script executor
