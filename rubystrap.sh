@@ -27,8 +27,8 @@ e_underline "Read To Program With Ruby!"
 cd ~/devBox
 sh mv.sh
 
-#rb1 = system('echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rben.sh"')
-#rb2 = system('echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh'')
+#rb1 = %x[sudo bash -c echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rben.sh"]
+#rb2 = %x[sudo bash -c echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh']
 
 #sudo bash -c #{rb1}
 #sudo bash -c #{rb2}
