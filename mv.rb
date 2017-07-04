@@ -3,9 +3,6 @@
 require 'script_executor'
 require 'colorize'
 
-#dir1 = gets
-#home_folder = $HOME.gets
-
 src = ARGV[0]
 dst = ARGV[1]
 
