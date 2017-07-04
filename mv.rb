@@ -6,11 +6,11 @@ require 'colorize'
 #dir1 = gets
 #home_folder = $HOME.gets
 
+src = ARGV[0]
+dst = ARGV[1]
+
+
 executor = ScriptExecutor.new
 
-executor.execute "cp -R #{dir1}/* #{home_folder}"
+executor.execute "cp -R #{src}/* #{dst}"
 puts "Success! Folders moved!".colorize(:blue ).colorize( :background => :red)
-
-
-###
-#FileUtils.mv_f('#{dirs}', '#{tmp_dir}')
