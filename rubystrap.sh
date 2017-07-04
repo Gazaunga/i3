@@ -32,3 +32,5 @@ sh mv.sh
 
 #sudo bash -c #{rb1}
 #sudo bash -c #{rb2}
+
+#check script executor
