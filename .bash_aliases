@@ -1,1 +1,6 @@
 alias _='sudo'
+alias ls='ls -hBG'
+alias l.='ls -d .*'
+alias ..='cd ..;'
+alias ...='cd ..;cd ..;'
+alias ....='cd ..;cd ..;cd ..'
