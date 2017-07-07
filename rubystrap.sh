@@ -1,6 +1,15 @@
 #!/bin/bash
 source ~/i3/.local/bin/.scripts/utils.sh
 
+echo "     _ _     _                _     "
+echo " ___(_) |_  | |__   __ _  ___| | __ "
+echo "/ __| | __| | '_ \ / _\` |/ __| |/ /"
+echo "\__ \ | |_  | |_) | (_| | (__|   <  "
+echo "|___/_|\__| |_.__/ \__,_|\___|_|\_\ "
+echo "                                    "
+echo "--------------------------------------"
+
+
 cd ~
 e_header "Let's build rbenv!"
 git clone git://github.com/sstephenson/rbenv.git .rbenv
