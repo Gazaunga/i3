@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require ‘thor’
+require 'thor'
 require 'script_executor'
 require 'colorize'
 require 'fileutils'
