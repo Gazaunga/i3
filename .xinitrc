@@ -8,6 +8,8 @@ exec i3
     
 sh ~/.fehbg &
 
+#export TERMINAL="$HOME/bin/st-0.7/st"
+
 userresources=$HOME/.Xdefaults
 #usermodmap=$HOME/.Xmodmap
 #sysmodmap=/etc/X11/xinit/.Xmodmap
