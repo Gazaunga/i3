@@ -11,3 +11,5 @@ executor = ScriptExecutor.new
 
 executor.execute "cp -R #{src}/* #{dst}"
 puts "Success! Folders moved!".colorize(:blue ).colorize( :background => :red)
+
+# ./mv.rb ~/i3/ ~/
