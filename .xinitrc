@@ -12,6 +12,14 @@ userresources=$HOME/.Xdefaults
 #usermodmap=$HOME/.Xmodmap
 #sysmodmap=/etc/X11/xinit/.Xmodmap
 
+if [ -f $sysmodmap ]; then
+    xmodmap $sysmodmap
+    xset r 66
+fi
+if [ -f "$usermodmap" ]; then
+    xmodmap "$usermodmap"
+fi
+
 #Set the background color
 
 #hsetroot -solid "#fdf6e3"		#light
