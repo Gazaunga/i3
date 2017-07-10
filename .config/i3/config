@@ -202,6 +202,7 @@ assign [class="(?i)opera"]                       $ws2
 bar {
 #    verbose yes
     status_command i3blocks #-c /home/gazbit/.config/i3/i3blocks.conf
+#   status_command i3status -c /home/gazbit/.config/i3status/config
     i3bar_command i3bar -t
     position top
     font pango:Hack, FontAwesome 11
