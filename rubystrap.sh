@@ -34,8 +34,8 @@ gem install bundler thor script_executor colorize gosu jekyll rake asciidoctor
 bundle install --path vendor/bundle 
 e_underline "Read To Program With Ruby!"
 
-cd ~/devBox
-sh mv.sh
+cd ~/i3
+ruby mv.rb
 
 #rb1 = %x[sudo bash -c echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> /etc/profile.d/rben.sh"]
 #rb2 = %x[sudo bash -c echo 'eval "$(rbenv init -)"' >> /etc/profile.d/rbenv.sh']
