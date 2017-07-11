@@ -23,3 +23,4 @@ fi
 
 
 
+alias lc="colorls -r"
