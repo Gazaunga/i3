@@ -20,7 +20,10 @@ if [ "$TERM" = "screen" ]; then
     export TERM=screen-256color
 fi
 
-
+if [[ $TERM == xterm-termite ]]; then
+  . /etc/profile.d/vte.sh
+  __vte_prompt_command
+fi
 
 
 alias lc="colorls -r"
