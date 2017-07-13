@@ -8,6 +8,10 @@ exec i3
     
 sh ~/.fehbg &
 
+# These should be the only commands needed
+xmodmap -e 'clear Lock' #ensures you're not stuck in CAPS on mode
+xmodmap -e 'keycode 0x42=Escape' #remaps the keyboard so CAPS LOCK=ESC
+
 #export TERMINAL="$HOME/bin/st-0.7/st"
 
 userresources=$HOME/.Xdefaults
