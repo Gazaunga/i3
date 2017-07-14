@@ -5,6 +5,8 @@ alias ..='cd ..;'
 alias ...='cd ..;cd ..;'
 alias ....='cd ..;cd ..;cd ..'
 
+alias mount='mount |column -t'
+
 # wget commands
 # This downloads a page localy
 wlocal='wget -p -k'
