@@ -3,7 +3,7 @@
 new_ruby_script()
 {
 if [ -n "$1" ]
-elselocal_script = '`mktemp scripster.rb.XXXX`
+else local_script = '`mktemp scripster.rb.XXXX`
 fi
 
 local_url = "https://raw.githubusercontent.com/pazdera/scripster/master"
