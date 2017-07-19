@@ -179,3 +179,9 @@ git log --graph --abbrev-commit --decorate --format=format:"%C(bold blue)%h%C(re
 
   # Show actual destinatoin of a tinyurl. Eg: untiny "tinyurl.com/savepii"
   function untiny() { curl -s "http://x.datasig.io/short?url=http://$1" | awk -F '"' '/d
+  
+def clean() {
+rm -rf "$HOME/.cache/"
+rm -rf "$HOME/.thumbnails"
+rm -rf "$HOME/.local/share/Trash"
+}
