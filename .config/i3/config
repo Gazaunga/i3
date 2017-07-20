@@ -2,6 +2,7 @@ set $mod Mod1
 set $win Mod4
 set $editor emacs
 set $term urxvt -e screen
+set $termite termite
 
 set_from_resource $darkred     color1  #000000
 set_from_resource $red         color9  #000000
@@ -66,6 +67,7 @@ floating_modifier $mod
 #bindsym $mod+Return exec --no-startup-id exec $HOME/.scripts/fullscreen_wrap.sh $editor
 #bindsym $mod+Shift+Return exec --no-startup-id exec $HOME/.scripts/fullscreen_wrap.sh $editor --name __scratchpad
 bindsym $mod+Return exec $term
+bindsym $win+Return exec $termite
 
 bindsym $mod+q kill
 
@@ -86,7 +88,7 @@ bindsym $win+h split h
 bindsym $win+v split v
 
 bindsym $mod+f fullscreen
-bindsym $mod+g fullscreen global
+bindsym $win+g fullscreen global
 
 bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
@@ -241,7 +243,7 @@ exec --no-startup-id sh ~/.local/bin/.scripts/Startup.sh
 exec --no-startup-id xterm -name scratch
 for_window [instance="scratch"] floating enable;
 for_window [instance="scratch"] move scratchpad; [instance="scratch"] scratchpad show; move position 0px 22px; resize shrink height 300px; resize grow width 683px; move scratchpad
-bindsym $mod+t [instance="qterm"] scratchpad show
+bindsym $mod+t [instance="urxvtd"] scratchpad show
 
 set $Locker i3lock && sleep 1
 
@@ -262,16 +264,16 @@ mode "$mode_system" {
 bindsym $mod+Pause mode "$mode_system"
 
 # lock screen
-#bindsym $mod+Escape exec --no-startup-id ~/bin/lockscreen
+#bindsym $win+Escape exec --no-startup-id ~/bin/lockscreen
 
 # screenshot (fullscreen)
 bindsym $mod+F5 exec --no-startup-id scrot ~/Pictures/screenshots/`date +%Y%m%d-%H%M%S`.png
 
 # task manager
-bindsym $mod+BackSpace exec --no-startup-id xfce4-taskmanager
+bindsym $win+BackSpace exec --no-startup-id xfce4-taskmanager
 
 # calendar
-bindsym $mod+c exec --no-startup-id gsimplecal
+bindsym $win+c exec --no-startup-id gsimplecal
 
 # 1 pixel decoration on new windows
 new_window 1pixel
