@@ -13,4 +13,6 @@ PATH=$PATH:$HOME/.local
 export TERMINAL=urxvt
 export FILEBROWSER=nautilus
 
+# if shell is zsh source ~/zsh/minimal.zsh
+
 
