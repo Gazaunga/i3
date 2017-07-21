@@ -3,3 +3,4 @@ if [ -f ~/.bashrc ]
    source ~/.bashrc
 fi
 
+setxkbmap -option keypad:pointerkeys
