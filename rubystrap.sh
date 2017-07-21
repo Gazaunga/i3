@@ -34,6 +34,9 @@ gem install bundler thor script_executor colorize gosu jekyll rake asciidoctor
 bundle install --path vendor/bundle 
 e_underline "Read To Program With Ruby!"
 
+# Flatpak repo
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 cd ~/i3
 ruby mv.rb
 
