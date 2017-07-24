@@ -185,3 +185,7 @@ rm -rf "$HOME/.cache/"
 rm -rf "$HOME/.thumbnails"
 rm -rf "$HOME/.local/share/Trash"
 }
+
+def dupe() {
+vi +'%!sort | uniq' +wq file.txt
+}
