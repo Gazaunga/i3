@@ -1,5 +1,36 @@
 UNAME=$(uname)
 
+# let's set a proper PATH
+#########################
+
+# This is an attempt to use a fancy path generator
+# like the one in .zshenv
+new_path=""
+expected_path=(
+  "$HOME/.local/bin"
+  "$HOME/.rvm/bin"
+  "$HOME/.gem/ruby/*.*/bin"
+  /sbin
+  /bin
+  /usr/bin
+  /usr/sbin
+  /etc
+)
+
+for element in "${expected_path[@]}"
+do
+  if [ -d $element ]; then
+    if [ -z $new_path ]; then
+      new_path=$element
+    else
+      new_path=$new_path:$element
+    fi
+  fi
+done
+
+PATH=$new_path
+export PATH
+
 # Enable a few things for less (This will also apply to man)
 #   * turn off case sensitive search (-I)
 #   * display a long prompt with more info (-M)
