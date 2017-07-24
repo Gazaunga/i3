@@ -186,6 +186,7 @@ rm -rf "$HOME/.thumbnails"
 rm -rf "$HOME/.local/share/Trash"
 }
 
+# Remove duplicate lines
 def dupe() {
 vi +'%!sort | uniq' +wq file.txt
 }
