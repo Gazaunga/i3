@@ -1,0 +1,15 @@
+UNAME=$(uname)
+
+# Enable a few things for less (This will also apply to man)
+#   * turn off case sensitive search (-I)
+#   * display a long prompt with more info (-M)
+#   * show colors instead of escape characters (-R)
+#   * don't clear the screen on exit (-X)
+export LESS="-IMRX"
+
+# Force C style sorting (e.g. dotfiles, then Uppercase then lowercase)
+export LC_COLLATE=C
+
+# use a fancy terminal if we aren't using tmux
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
