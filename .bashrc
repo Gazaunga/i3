@@ -25,5 +25,8 @@ if [[ $TERM == xterm-termite ]]; then
   __vte_prompt_command
 fi
 
-
-alias lc="colorls -r"
+# check e flag
+[ -e "/etc/DIR_COLORS" ] && DIR_COLORS="/etc/DIR_COLORS"
+[ -e "$HOME/.dircolors" ] && DIR_COLORS="$HOME/.dircolors"
+[ -e "$DIR_COLORS" ] || DIR_COLORS=""
+eval "`dircolors -b $DIR_COLORS`"
