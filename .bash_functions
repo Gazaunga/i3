@@ -190,3 +190,22 @@ rm -rf "$HOME/.local/share/Trash"
 def dupe() {
 vi +'%!sort | uniq' +wq file.txt
 }
+
+gacp () {
+  git add --all --verbose
+  git commit -m "$1"
+  git push -u origin HEAD
+}
+
+## Interesting bash function for setting up a new front-end project
+# Usage: new_project DIRNAME DESCRIPTION
+function new_project() {
+  git init "$1" && \
+	  pushd "$1" && \
+	  echo "$2" > README.txt && \
+	  echo "$2" > .git/description && \
+	  echo "/node_modules/" >> .gitignore && \
+	  hub create -d "$2" && \
+	  yarn init && \
+	  gacp initial
+}
