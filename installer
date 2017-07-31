@@ -5,23 +5,37 @@
 # Install everything I need!
 
 # Packages for the new installation
-pkgs=(artwiz-fonts compton dmenu git herbstluftwm htop
-lxappearance nitrogen pulseaudio pulseaudio-alsa pavucontrol
-qutebrowser ranger rtorrent termite maim spacefm unzip p7zip
-youtube-dl weechat wget xorg-server xorg-xfontsel xorg-xinit
-xf86-video-intel zip zsh terminus-font deadbeef mpd
-ncmpcpp mpc vim gtk-engine-murrine adwaita-icon-theme gimp
-w3m connman wpa_supplicant iw xorg-xmodmap xorg-setxkbmap
-redshift sxhkd xorg-xsetroot xorg-xset rxvt-unicode
-urxvt-perls mpv ttf-freefont slop udisks2 syslinux
-ttf-symbola)
+pkgs=(ubo-icons glances screen neovim python-neovim
+python2-neovim ffmpeg mpv ranger mc rainbowstream pandoc
+rmlint telegram-cli-git cylon zathura okular ttf-google-fonts-git
+horst httping alot-git rtv neomutt-git adobe-source-code-pro-fonts
+adobe-source-sans-pro-fonts rainbow source-highlight polkit lesspipe
+colormake-git prettyping ttf-font-awesome imagemagick neofetch-git
+ttf-hack ttf-ms-fonts ttf-ubuntu-font-family ttf-mac-fonts
+ttf-symbola font-mathematica artwiz-fonts git pavucontrol
+youtube-dl zsh terminus-font connman wpa_supplican)
 
 # You know the thing
 pacaur -Syu $pkgs
 
+# Update fonts
+fc-cache -v
+
+# Fancy
+curl -sLf https://spacevim.org/install.sh | bash
+curl https://raw.githubusercontent.com/scopatz/nanorc/master/install.sh | sh
+
+
+# Git stuff
+git config --global user.name "Gazaunga"
+git config --global user.email "jeremy.ottley@gmail.com"
+git config --global core.autocrlf input
+git config --global core.safecrlf true
+
 # Clone dot files from github and move them
-#git clone https://github.com/Shinryuu/dotfiles && cd
-#.dotfiles && cp -rv .* ~/
+cd ~
+git clone https://github.com/Gazaunga/i3.git && cd i3
+cp -rv .* ~/
 
 # Print something useful
 echo
